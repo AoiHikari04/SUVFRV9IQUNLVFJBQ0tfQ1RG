@@ -27,7 +27,7 @@ This repository is organized by category to easily locate the solutions you need
     
 - `/crypto/`: Scripts and explanations for Cryptography challenges.
     
-- `/pwn/`: Exploits and notes for Binary Exploitation (Pwn) challenges.
+- `/BIN/`: Exploits and notes for Binary Exploitation challenges.
     
 - `/misc/`: Solutions for Miscellaneous challenges (OSINT, Steganography, etc.).
     
