@@ -47,3 +47,13 @@ password = Manilkara zapota
 ```
 IHT{C00l_U$3r_Fl@g$_@r3_@w3$0m3!}
 ```
+
+## Deploying 
+
+use docker hub, 
+
+```
+https://hub.docker.com/repository/docker/aoihikari04/mybpadlijam
+```
+
+pull the repo and run using docker
