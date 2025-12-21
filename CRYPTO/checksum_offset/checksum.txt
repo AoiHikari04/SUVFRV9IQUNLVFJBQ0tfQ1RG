@@ -1,0 +1,8 @@
+To assess the integrity of the provided data:
+
+1. Examine the file at the byte level.
+2. Combine the values to obtain a single 8-bit result.
+3. Represent the result in hexadecimal form.
+
+The structure of the data depends on this result.
+Only specific positions contain meaningful information.
