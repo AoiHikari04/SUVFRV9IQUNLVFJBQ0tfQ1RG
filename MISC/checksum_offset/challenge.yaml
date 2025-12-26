@@ -1,0 +1,68 @@
+# Required sections
+name: "checksum_stride"
+author: "ad"
+category: "General"
+description: |
+  Integrity checks do more than validate data.
+  Sometimes, they define the structure of information.
+
+  Only some parts of the data are meaningful.
+
+value: 800
+type: standard
+
+# Optional: dynamic scoring (unused)
+# extra:
+#     initial: 500
+#     decay: 100
+#     minimum: 50
+
+# Docker-related fields (not used)
+image: null
+protocol: null
+host: null
+
+# Connection info (not needed for file-based challenge)
+connection_info: null
+
+# Healthcheck (optional, remove if unused)
+healthcheck: null
+
+# Limit attempts (optional)
+attempts: 0
+
+# Flags
+flags:
+  - flag{offsets_are_powerful}
+
+# Admin-only topics
+topics:
+  - "File analysis"
+  - "Checksums"
+  - "Offsets"
+
+# Public tags
+tags:
+  - forensics
+  - logic
+
+# Files included with the challenge
+files:
+  - data.bin
+  - checksum.txt
+
+# Optional hints
+hints:
+  - content: "The checksum affects how the data is laid out."
+    cost: 0
+  - content: "Not all bytes are meant to be read."
+    cost: 50
+
+# Challenge dependencies
+requirements: null
+
+# Visibility
+state: "visible"
+
+# Specification version
+version: "0.1"

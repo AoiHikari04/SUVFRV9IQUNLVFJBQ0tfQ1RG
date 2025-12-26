@@ -1,0 +1,66 @@
+# This file represents the base specification of your challenge. It is used by
+# other tools to install and deploy your challenge.
+
+# Required sections
+name: "Packet Whisperer"
+author: "ad"
+category: Forensics
+description: |
+  It was a normal day at work for Jordan and as he was going about his work, he captured suspicious HTTP activity from a compromised machine.
+  The attacker might have tried to exfiltrate something important.
+  Can you analyze the traffic and retrieve the flag?
+
+  The flag is somewhere in one of the HTTP POST requests.
+
+value: 300
+type: standard
+
+# Settings used for Dockerfile deployment
+# Set to null because this is a file-download challenge, not a hosted service.
+image: null
+protocol: null
+host: null
+
+# Optional settings
+connection_info: null
+healthcheck: null
+
+# Limits the number of attempts
+attempts: 5
+
+# Flags specify answers that your challenge use.
+flags:
+  - type: static
+    content: "IHT{you_got_it}"
+    data: case_insensitive
+
+# Topics are used to help tell what techniques/information a challenge involves
+topics:
+  - "Network Forensics"
+  - "Traffic Analysis"
+
+# Tags are used to provide additional public tagging to a challenge
+tags:
+  - "pcap"
+  - "wireshark"
+  - "http"
+
+# Provide paths to files from the same directory that this file is in
+files:
+  - "capture.pcap"
+
+# Hints are used to give players a way to buy or have suggestions.
+hints:
+  - content: "Try filtering by HTTP POST and decoding Base64. Not all Base64-looking strings are flags."
+    cost: 50
+  - content: "Check the data of the POST requests"
+    cost: 100
+
+# Requirements are used to make a challenge require another challenge to be solved first
+requirements: null
+
+# The state of the challenge (hidden vs visible)
+state: visible
+
+# Specifies what version of the challenge specification was used.
+version: "1.0"
